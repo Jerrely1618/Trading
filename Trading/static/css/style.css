@@ -1,0 +1,151 @@
+:root{
+  --color2: #150B27;
+  --color1: #5E2AB9;
+  --color3:#203AB9;
+}
+body{
+  background-color: var(--color1);
+  margin: 0;
+  font-family: 'Montserrat';
+  color: white;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.navbar {
+  background-color: var(--color2);
+  padding: 30px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-right: 10px;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
+.nav-links li.nav-right {
+  margin-left: auto;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.nav-links a:hover {
+  background-color: var(--color1);
+}
+.container-form{
+  width: 300px;
+  margin: 0 auto;
+  padding-top: 150px;
+}
+.login-form {
+  background-color: var(--color2);
+  padding: 20px;
+  border-radius: 5px;
+}
+.signup-form {
+  background-color: var(--color2);
+  padding: 20px;
+  border-radius: 5px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  border: none;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: var(--color1);
+  border: none;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--color2);
+}
+
+.wrapper {
+  padding: 20px;
+  padding-bottom: 0;
+}
+  
+.container-stocks-display{
+  background-color: var(--color2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  color: white;
+}
+.left-side {
+  flex: 1;
+  padding: 20px;
+}
+.right-side {
+  flex: 3;
+  padding: 20px;
+  height: 100%; 
+  display: flex;
+  align-items: center;
+
+}
+.stock-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+.stock-list li {
+  margin: 10px;
+  cursor: pointer;
+}
+.stock-list li::selection {
+  background-color: white;
+}
+.stock-graph {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+}
+  
+.stock-graph h2 {
+    text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section {
+    flex: initial;
+    width: 100%;
+    height: auto;
+  }
+}
