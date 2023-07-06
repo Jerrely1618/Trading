@@ -5,22 +5,74 @@
     <div class="container-stocks-display">
         <div class="left-side">
             <ul class="stock-list">
-                <li>VOO</li>
-                <li>APPL</li>
-                <li>GOOGL</li>
-                <li>TSLA</li>
-                <li>AMZN</li>
+                <div class="wrapper">
+                <li>
+                    <p>VOO</p> 
+                    <p class="cost-stock">{{VOO}}</p>
+                </li>
+                </div>
+                <div class="wrapper">
+                <li>
+                    <p>AAPL</p> 
+                    <p class="cost-stock">{{AAPL}}</p>
+                </li>
+                </div>
+                <div class="wrapper">
+                <li>
+                    <p>GOOGL</p> 
+                    <p class="cost-stock">{{GOOGL}}</p>
+                </li>
+                </div>
+                <div class="wrapper">
+                <li>
+                    <p>AMZN</p> 
+                    <p class="cost-stock">{{AMZN}}</p>
+                </li>
+                </div>
+                <div class="wrapper">
+                <li>
+                    <p>APPL</p> 
+                    <p class="cost-stock">{{AAPL}}</p>
+                </li>
+                </div>
             </ul>
         </div>
         <div class = "right-side">
             <h2>Stock Graph</h2>
+            <ul>
+                <li>
+                    <p>1D</p> 
+                </li>
+                <li>
+                    <p>5D</p> 
+                </li>
+                <li>
+                    <p>1M</p> 
+                </li>
+                <li>
+                    <p>6M</p> 
+                </li>
+                <li>
+                    <p>1Y</p> 
+                </li>
+                <li>
+                    <p>5Y</p> 
+                </li>
+                <li>
+                    <p>Max</p> 
+                </li>
+            </ul>
             <div class="stock-graph">
-                <!-- Placeholder for the stock graph image or chart -->
+                {{ div | safe}}
             </div>
         </div>
     </div>
 </div>
-
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-3.2.0.min.js"></script>
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.2.0.min.js"></script>   
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.2.0.min.js"></script>
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-api-3.2.0.min.js"></script>
+{{ script | safe}}
 
 </body>
 </html>

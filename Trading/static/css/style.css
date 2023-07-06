@@ -1,7 +1,7 @@
 :root{
-  --color2: #150B27;
-  --color1: #5E2AB9;
-  --color3:#203AB9;
+  --color1: lightslategray;
+  --color2: rgb(101, 115, 129);
+  --color3:dimgray;
 }
 body{
   background-color: var(--color1);
@@ -95,57 +95,39 @@ button[type="submit"]:hover {
   
 .container-stocks-display{
   background-color: var(--color2);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   padding: 20px;
-  gap: 20px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 25% 75%;
   border-radius: 20px;
   overflow: hidden;
   color: white;
 }
-.left-side {
-  flex: 1;
-  padding: 20px;
-}
-.right-side {
-  flex: 3;
-  padding: 20px;
-  height: 100%; 
-  display: flex;
-  align-items: center;
-
+.cost-stock{
+  margin-top: 0;
+  margin-bottom: 20;
 }
 .stock-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
+  list-style-type: none;
+  padding: 0;
+}
 .stock-list li {
-  margin: 10px;
   cursor: pointer;
+  text-align: left;
+  background-color: var(--color1);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  padding-left: 10px;
 }
 .stock-list li::selection {
   background-color: white;
 }
 .stock-graph {
-  width: 100%;
+  width: auto;
   height: auto;
-  border: 1px solid #ccc;
 }
   
 .stock-graph h2 {
     text-align: center;
-}
-@media screen and (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .left-section,
-  .right-section {
-    flex: initial;
-    width: 100%;
-    height: auto;
-  }
 }
